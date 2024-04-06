@@ -342,11 +342,18 @@ def emoo():
                 k=int(input("Please write how many movie suggestions you would like to receive"))
 
 
-            while len(x)!=k: 
+            while len(x)!=k:
+
+                b=random.choice(t)
+
+                if b not in x:
+
+                    x.append(b)
 
   
 
-                x.append(random.choice(t)) 
+            print(x) 
+ 
 
   
 
@@ -456,13 +463,16 @@ def emoo():
 
   
 
-    while len(x)<k: 
+    while len(x)<k:
+        b=random.choice(t)
+        if b not in x:
 
-        x.append(random.choice(t)) 
+            x.append(b) 
 
   
 
-    print(x) 
+    
+    print(x)
 
   
 
