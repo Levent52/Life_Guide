@@ -1378,7 +1378,12 @@ def act():
 
   
 
-    v=input("Please Choose one of these: cry, sleep, study, dance, workout, falling stars")  
+    v=input("Please Choose one of these: cry, sleep, study, dance, workout, falling stars")
+
+    while v!="Chill" and v!="chill" and v!="Falling stars" and v!="falling stars" and v!="workout" and v!="Workout" and v!="Dance" and v!="dance" and v!="Sleep" and v!="sleep" and v!="Study" and v!="study" and v!="Cry" and v!="cry":
+        v=input("Please Choose one of these: cry, sleep, study, dance, workout, falling stars")
+        
+                
 
   
 
@@ -1432,77 +1437,7 @@ def act():
 
   
 
-    else: 
 
-  
-
-             
-
-  
-
-            while v!="Chill" or v!="chill" or v!="Falling stars" or v!="falling stars" or v!="workout" or v!="Workout" or v!="Dance" or v!="dance" or v!="Sleep" or v!="sleep" or v!="Study" or v!="study" or v!="Cry" or v!="cry": 
-
-  
-
-  
-
-                v=input("Please Choose one of these: cry, sleep, study, dance, workout, falling stars") 
-
-                if v=="Cry" or v=="cry": 
-
-                    webbrowser.open(random.choice(cry)) 
-
-                    break 
-
-  
-
-             
-
-                elif v=="Sleep" or v=="sleep" or v=="Study" or v=="study": 
-
-                    webbrowser.open(random.choice(sleep)) 
-
-                    break 
-
-  
-
-  
-
-                elif v=="Dance" or v=="dance": 
-
-                    webbrowser.open(random.choice(dance)) 
-
-                    break 
-
-  
-
-             
-
-                elif v=="workout"or v=="Workout": 
-
-                    webbrowser.open(random.choice(workout)) 
-
-                    break 
-
-  
-
-             
-
-                elif v=="Falling stars" or v=="falling stars": 
-
-                    webbrowser.open(random.choice(look_sky)) 
-
-                    break 
-
-  
-
-             
-
-                elif v=="Chill" or v=="chill": 
-
-                    webbrowser.open(random.choice(chill)) 
-
-                    break 
 
   
 
@@ -1672,13 +1607,20 @@ def lang():
 
              "https://www.youtube.com/watch?v=wmZmRxKSCtE", 
 
-             "https://www.youtube.com/watch?v=U2h0SMpdZR4"] 
+             "https://www.youtube.com/watch?v=U2h0SMpdZR4"]
+    
+
+    
+    m=input("Please choose one of these: Türkçe, English, Korean, French, Spanish")
 
   
 
   
 
-    m=input("Please choose one of these: Türkçe, English, Korean, French, Spanish") 
+    while m!= "spanish" and m!="spanish" and m!= "Korean" and m!= "korean" and m!= "French" and m!= "french" and m!= "Türkçe" and m!="türkçe" and m!= "English" and m!="english":
+
+
+        m=input("Please choose one of these: Türkçe, English, Korean, French, Spanish") 
 
   
 
@@ -1732,89 +1674,7 @@ def lang():
 
     elif m== "Spanish" or m=="spanish": 
 
-        webbrowser.open(random.choice(spanish)) 
-
-  
-
-  
-
-  
-
-    else: 
-
-             
-
-         
-
-  
-
-        while m!= "spanish" or m!="spanish" or m!= "Korean" or m!= "korean" or m!= "French" or m!= "french" or m!= "Türkçe" or m!="türkçe" or m!= "English" or m!="english": 
-
-  
-
-            m=input("Please choose one of these: Türkçe, English, Korean, French, Spanish") 
-
-  
-
-  
-
-            if m== "English" or m== "english": 
-
-                webbrowser.open(random.choice(english)) 
-
-                break 
-
-  
-
-  
-
-  
-
-            elif m== "Türkçe" or m=="türkçe": 
-
-                webbrowser.open(random.choice(turkish)) 
-
-                break 
-
-         
-
-  
-
-  
-
-            elif m== "French" or m== "french": 
-
-                webbrowser.open(random.choice(french)) 
-
-                break 
-
-  
-
-  
-
-  
-
-  
-
-            elif m== "Korean" or m== "korean": 
-
-                 webbrowser.open(random.choice(korean)) 
-
-                 break 
-
-  
-
-  
-
-  
-
-  
-
-            elif m== "Spanish" or m=="spanish": 
-
-                 webbrowser.open(random.choice(spanish)) 
-
-                 break 
+        webbrowser.open(random.choice(spanish))
 
   
 
@@ -1840,7 +1700,9 @@ def ranbook():
 
   
 
-def typ(): 
+def typ():
+    q=["biographies","Biographies","Fantastic","fantastic", "Fairytale", "fairytale","Children"
+       ,"children", "sport", "Sport", "economy", "Economy", "science", "Science", "Philosophy", "philosophy","History","history"]
 
   
 
@@ -1850,9 +1712,14 @@ def typ():
 
   
 
-         
+    while s not in q:
 
-    if s=="History" or s=="history": 
+            last_message+= "Please choose one of these: Biographies, Fantastic, Fairytale, Children, Sport, Economy, Science, Philosophy, History"
+            messagebox.showinfo("Constraints", last_message)
+            s=input("Please Choose type")
+            
+
+    if s==q[16] or s==q[17]: 
 
         a=open("history.txt","r") 
 
@@ -1874,7 +1741,7 @@ def typ():
 
              
 
-    elif s=="Philosophy" or s=="philosophy": 
+    elif s==q[15] or s==q[14]: 
 
         a=open("philosophy.txt","r") 
 
@@ -1896,7 +1763,7 @@ def typ():
 
              
 
-    elif s=="science" or s=="Science": 
+    elif s==q[13] or s==q[12]: 
 
         a=open("science.txt","r") 
 
@@ -1918,7 +1785,7 @@ def typ():
 
              
 
-    elif s=="economy" or s=="Economy": 
+    elif s==q[11] or s==q[10]: 
 
         a=open("economy.txt","r") 
 
@@ -1940,7 +1807,7 @@ def typ():
 
              
 
-    elif s=="sport" or s=="Sport": 
+    elif s==q[9] or s==q[8]: 
 
         a=open("Sport.txt","r") 
 
@@ -1962,7 +1829,7 @@ def typ():
 
              
 
-    elif s=="Children" or s=="children": 
+    elif s==q[7] or s==q[6]: 
 
         a=open("Children.txt","r") 
 
@@ -1984,7 +1851,7 @@ def typ():
 
              
 
-    elif s=="Fairytale" or s=="fairytale": 
+    elif s==q[5] or s==q[4]: 
 
         a=open("Fairytale.txt","r") 
 
@@ -2006,7 +1873,7 @@ def typ():
 
              
 
-    elif s=="Fantastic" or s=="fantastic": 
+    elif s==q[3] or s==q[2]: 
 
         a=open("Fantastic.txt","r") 
 
@@ -2028,7 +1895,7 @@ def typ():
 
   
 
-    elif s=="biographhies" or s=="Biographies": 
+    elif s==q[1] or s==q[0]: 
 
         a=open("biographies.txt","r") 
 
@@ -2044,223 +1911,7 @@ def typ():
 
         frame_end.place(relx=0, rely=0, relwidth=1, relheight=1) 
 
-        Label(frame_end, bg='purple', text=random.choice(a.readlines()), font='Verdana 12 bold', fg='white').place(relx=0.1, rely=0.1, relwidth=0.8, relheight=0.8) 
-
-  
-
-  
-
-             
-
-    else: 
-
-        last_message+= "Please choose one of these: Biographies, Fantastic, Fairytale, Children, Sport, Economy, Science, Philosophy, History" 
-
-        messagebox.showinfo("Constraints", last_message) 
-
-        while s!="biographhies" or s!="Biographies" or s!="Fantastic" or s!="fantastic" or s!="Fairytale" or s!="fairytale" or s!="Children" or s!="children" or s!="sport" or s!="Sport" or s!="economy" or s!="Economy" or s!="science" or s!="Science" or s!="Philosophy" or s!="philosophy" or s!="History" or s!="history": 
-
-            s=input("Please Choose type") 
-
-  
-
-  
-
-            if s=="History" or s=="history": 
-
-                a=open("history.txt","r") 
-
-  
-
-                r=Tk() 
-
-                canvas=Canvas(r, height=600, width=600) 
-
-                canvas.pack() 
-
-                frame_end=Frame(r, bg="purple") 
-
-                frame_end.place(relx=0, rely=0, relwidth=1, relheight=1) 
-
-                Label(frame_end, bg='purple', text=random.choice(a.readlines()), font='Verdana 12 bold', fg='white').place(relx=0.1, rely=0.1, relwidth=0.8, relheight=0.8) 
-
-                break 
-
-             
-
-            elif s=="Philosophy" or s=="philosophy": 
-
-                a=open("philosophy.txt","r") 
-
-  
-
-                r=Tk() 
-
-                canvas=Canvas(r, height=600, width=600) 
-
-                canvas.pack() 
-
-                frame_end=Frame(r, bg="purple") 
-
-                frame_end.place(relx=0, rely=0, relwidth=1, relheight=1) 
-
-                Label(frame_end, bg='purple', text=random.choice(a.readlines()), font='Verdana 12 bold', fg='white').place(relx=0.1, rely=0.1, relwidth=0.8, relheight=0.8) 
-
-                break 
-
-             
-
-            elif s=="science" or s=="Science": 
-
-                a=open("science.txt","r") 
-
-  
-
-                r=Tk() 
-
-                canvas=Canvas(r, height=600, width=600) 
-
-                canvas.pack() 
-
-                frame_end=Frame(r, bg="purple") 
-
-                frame_end.place(relx=0, rely=0, relwidth=1, relheight=1) 
-
-                Label(frame_end, bg='purple', text=random.choice(r.readlines()), font='Verdana 12 bold', fg='white').place(relx=0.1, rely=0.1, relwidth=0.8, relheight=0.8) 
-
-                break 
-
-             
-
-            elif s=="economy" or s=="Economy": 
-
-                a=open("economy.txt","r") 
-
-         
-
-                r=Tk() 
-
-                canvas=Canvas(r, height=600, width=600) 
-
-                canvas.pack() 
-
-                frame_end=Frame(r, bg="purple") 
-
-                frame_end.place(relx=0, rely=0, relwidth=1, relheight=1) 
-
-                Label(frame_end, bg='purple', text=random.choice(a.readlines()), font='Verdana 12 bold', fg='white').place(relx=0.1, rely=0.1, relwidth=0.8, relheight=0.8) 
-
-                break 
-
-             
-
-            elif s=="sport" or s=="Sport": 
-
-                a=open("Sport.txt","r") 
-
-  
-
-                r=Tk() 
-
-                canvas=Canvas(r, height=600, width=600) 
-
-                canvas.pack() 
-
-                frame_end=Frame(r, bg="purple") 
-
-                frame_end.place(relx=0, rely=0, relwidth=1, relheight=1) 
-
-                Label(frame_end, bg='purple', text=random.choice(a.readlines()), font='Verdana 12 bold', fg='white').place(relx=0.1, rely=0.1, relwidth=0.8, relheight=0.8) 
-
-                break 
-
-             
-
-            elif s=="Children" or s=="children": 
-
-                a=open("Children.txt","r") 
-
-  
-
-                r=Tk() 
-
-                canvas=Canvas(r, height=600, width=600) 
-
-                canvas.pack() 
-
-                frame_end=Frame(r, bg="purple") 
-
-                frame_end.place(relx=0, rely=0, relwidth=1, relheight=1) 
-
-                Label(frame_end, bg='purple', text=random.choice(a.readlines()), font='Verdana 12 bold', fg='white').place(relx=0.1, rely=0.1, relwidth=0.8, relheight=0.8) 
-
-                break 
-
-             
-
-            elif s=="Fairytale" or s=="fairytale": 
-
-                a=open("Fairytale.txt","r") 
-
-  
-
-                r=Tk() 
-
-                canvas=Canvas(r, height=600, width=600) 
-
-                canvas.pack() 
-
-                frame_end=Frame(r, bg="purple") 
-
-                frame_end.place(relx=0, rely=0, relwidth=1, relheight=1) 
-
-                Label(frame_end, bg='purple', text=random.choice(a.readlines()), font='Verdana 12 bold', fg='white').place(relx=0.1, rely=0.1, relwidth=0.8, relheight=0.8) 
-
-                break 
-
-             
-
-            elif s=="Fantastic" or s=="fantastic": 
-
-                a=open("Fantastic.txt","r") 
-
-  
-
-                r=Tk() 
-
-                canvas=Canvas(r, height=600, width=600) 
-
-                canvas.pack() 
-
-                frame_end=Frame(r, bg="purple") 
-
-                frame_end.place(relx=0, rely=0, relwidth=1, relheight=1) 
-
-                Label(frame_end, bg='purple', text=random.choice(a.readlines()), font='Verdana 12 bold', fg='white').place(relx=0.1, rely=0.1, relwidth=0.8, relheight=0.8) 
-
-                break 
-
-  
-
-            elif s=="biographhies" or s=="Biographies": 
-
-                a=open("biographies.txt","r") 
-
-  
-
-                r=Tk() 
-
-                canvas=Canvas(r, height=600, width=600) 
-
-                canvas.pack() 
-
-                frame_end=Frame(r, bg="purple") 
-
-                frame_end.place(relx=0, rely=0, relwidth=1, relheight=1) 
-
-                Label(frame_end, bg='purple', text=random.choice(a.readlines()), font='Verdana 12 bold', fg='white').place(relx=0.1, rely=0.1, relwidth=0.8, relheight=0.8) 
-
-                break 
+        Label(frame_end, bg='purple', text=random.choice(a.readlines()), font='Verdana 12 bold', fg='white').place(relx=0.1, rely=0.1, relwidth=0.8, relheight=0.8)
 
   
 
@@ -2272,7 +1923,11 @@ def typ():
 
      
 
-def aut(): 
+def aut():
+    q=["Peter Handke", "peter handke", "Louise Glück", "louise glück", "Harold Pinter", "harold pinter", "Stefan Zweig", "stefan zweig", "Dostoyevski", "dostoyevski",
+       "Tolstoy", "tolstoy", "Alexander Pushkin", "alexander pushkin", "Jules Verne", "jules verne", "Oğuz Atay", "oğuz atay","Goethe","goethe", "Jack London", "jack london",
+       "Victor Hugo", "victor hugo", "Oscar Wilde", "oscar wilde", "George Orwell", "george orwell"]
+       
 
   
 
@@ -2280,9 +1935,15 @@ def aut():
 
     ü=input("Please enter author name") 
 
-    last_message= ""      
+    last_message= ""
+    while ü not in q:
+        last_message += "Please choose one of these: Louise Glück, Peter Handke, Harold Pinter, Stefan Zweig, Dostoyevski, Tolstoy, Alexander Pushkin, Jules Verne, Oğuz Atay, Goethe, Jack London ,Victor Hugo, Oscar Wilde, George Orwell" 
 
-    if ü=="Peter Handke" or ü=="peter handke": 
+        messagebox.showinfo("Constraints", last_message)
+        ü=input("Please enter author name")
+        
+
+    if ü==q[0] or ü==q[1]: 
 
         d=open("peterhandke.txt","r") 
 
@@ -2302,7 +1963,7 @@ def aut():
 
                
 
-    elif ü=="Louise Glück" or ü=="louise glück": 
+    elif ü==q[2] or ü==q[3]: 
 
         d=open("louiseglück.txt","r") 
 
@@ -2322,7 +1983,7 @@ def aut():
 
   
 
-    elif ü=="Harold Pinter" or ü=="harold pinter": 
+    elif ü==q[4] or ü==q[5]: 
 
         d=open("haroldpinter.txt","r") 
 
@@ -2342,7 +2003,7 @@ def aut():
 
   
 
-    elif ü=="Stefan Zweig" or ü=="stefan zweig": 
+    elif ü==q[6] or ü==q[7]: 
 
         d=open("stefanzweig.txt","r") 
 
@@ -2362,7 +2023,7 @@ def aut():
 
   
 
-    elif ü=="Dostoyevski" or ü=="dostoyevski": 
+    elif ü==q[8] or ü==q[9]: 
 
         d=open("dostoyevski.txt","r") 
 
@@ -2382,7 +2043,7 @@ def aut():
 
   
 
-    elif ü=="Tolstoy" or ü=="tolstoy": 
+    elif ü==q[10] or ü==q[11]: 
 
         d=open("tolstoy.txt","r") 
 
@@ -2402,7 +2063,7 @@ def aut():
 
   
 
-    elif ü=="Alexander Pushkin" or ü=="alexander pushkin": 
+    elif ü==q[12] or ü==q[13]: 
 
         d=open("pushkin.txt","r") 
 
@@ -2422,7 +2083,7 @@ def aut():
 
   
 
-    elif ü=="Jules Verne" or ü=="jules verne": 
+    elif ü==q[14] or ü==q[15]: 
 
         d=open("verne.txt","r") 
 
@@ -2442,7 +2103,7 @@ def aut():
 
   
 
-    elif  ü=="Oğuz Atay" or ü=="oğuz atay": 
+    elif  ü==q[16] or ü==q[17]: 
 
         d=open("oguzatay.txt","r") 
 
@@ -2462,7 +2123,7 @@ def aut():
 
   
 
-    elif ü=="Goethe" or ü=="goethe": 
+    elif ü==q[18] or ü==q[19]: 
 
         d=open("goethe.txt","r") 
 
@@ -2482,7 +2143,7 @@ def aut():
 
   
 
-    elif ü=="Jack London" or ü== "jack london": 
+    elif ü==q[20] or ü==q[21]: 
 
         d=open("jacklondon.txt","r") 
 
@@ -2502,7 +2163,7 @@ def aut():
 
   
 
-    elif ü=="Victor Hugo" or ü=="victor hugo": 
+    elif ü==q[22] or ü==q[23]: 
 
         d=open("hugo.txt","r") 
 
@@ -2520,7 +2181,7 @@ def aut():
 
   
 
-    elif ü=="Oscar Wilde" or ü=="oscar wilde": 
+    elif ü==q[24] or ü==q[25]: 
 
         d=open("oscarwilde.txt","r") 
 
@@ -2538,7 +2199,7 @@ def aut():
 
   
 
-    elif ü=="George Orwell" or ü=="george orwell": 
+    elif ü==q[26] or ü==q[27]: 
 
         d=open("orwell.txt","r") 
 
@@ -2552,299 +2213,7 @@ def aut():
 
         frame_end.place(relx=0, rely=0, relwidth=1, relheight=1) 
 
-        Label(frame_end, bg='purple', text=random.choice(d.readlines()), font='Verdana 12 bold', fg='white').place(relx=0.1, rely=0.1, relwidth=0.8, relheight=0.8)         
-
-  
-
-  
-
-    else: 
-
-        last_message += "Please choose one of these: Louise Glück, Peter Handke, Harold Pinter, Stefan Zweig, Dostoyevski, Tolstoy, Alexander Pushkin, Jules Verne, Oğuz Atay, Goethe, Jack London ,Victor Hugo, Oscar Wilde, George Orwell" 
-
-        messagebox.showinfo("Constraints", last_message) 
-
-        while ü!="Louise Glück" or ü!="louise glück" or ü!= "Peter Handke" or ü!="peter handke" or ü!="Harold Pinter" or ü!="harold pinter" or ü!="stefan zweig" or ü!="Stefan Zweig" or ü!="Dostoyevski" or ü!="dostoyevski" or ü!="Tolstoy" or ü!="tolstoy" or ü!="Alexander Pushkin" or ü!="alexander pushkin" or ü!="Jules Verne" or ü!="jules verne" or ü!="Oğuz Atay" or ü!="oğuz atay" or ü!="Goethe" or ü!="goethe" or ü!="Jack London" or ü!="jack london" or ü!="Victor Hugo" or ü!="victor hugo" or ü!="Oscar Wilde" or ü!="oscar wilde" or ü!="George Orwell" or ü!="george orwell":  
-
-            ü=input("Please Enter author name") 
-
-            if ü=="Peter Handke" or ü=="peter handke": 
-
-                d=open("peterhandke.txt","r") 
-
-                e=Tk() 
-
-                canvas=Canvas(e, height=600, width=600) 
-
-                canvas.pack() 
-
-                frame_end=Frame(e, bg="purple") 
-
-                frame_end.place(relx=0, rely=0, relwidth=1, relheight=1) 
-
-                Label(frame_end, bg='purple', text=random.choice(d.readlines()), font='Verdana 12 bold', fg='white').place(relx=0.1, rely=0.1, relwidth=0.8, relheight=0.8) 
-
-                break 
-
-               
-
-            elif ü=="Louise Glück" or ü=="louise glück": 
-
-                d=open("louiseglück.txt","r") 
-
-                e=Tk() 
-
-                canvas=Canvas(e, height=600, width=600) 
-
-                canvas.pack() 
-
-                frame_end=Frame(e, bg="purple") 
-
-                frame_end.place(relx=0, rely=0, relwidth=1, relheight=1) 
-
-                Label(frame_end, bg='purple', text=random.choice(d.readlines()), font='Verdana 12 bold', fg='white').place(relx=0.1, rely=0.1, relwidth=0.8, relheight=0.8) 
-
-                break 
-
-  
-
-            elif ü=="Harold Pinter" or ü=="harold pinter": 
-
-                d=open("haroldpinter.txt","r") 
-
-                e=Tk() 
-
-                canvas=Canvas(e, height=600, width=600) 
-
-                canvas.pack() 
-
-                frame_end=Frame(e, bg="purple") 
-
-                frame_end.place(relx=0, rely=0, relwidth=1, relheight=1) 
-
-                Label(frame_end, bg='purple', text=random.choice(d.readlines()), font='Verdana 12 bold', fg='white').place(relx=0.1, rely=0.1, relwidth=0.8, relheight=0.8) 
-
-                break 
-
-  
-
-            elif ü=="Stefan Zweig" or ü=="stefan zweig": 
-
-                d=open("stefanzweig.txt","r") 
-
-                e=Tk() 
-
-                canvas=Canvas(e, height=600, width=600) 
-
-                canvas.pack() 
-
-                frame_end=Frame(e, bg="purple") 
-
-                frame_end.place(relx=0, rely=0, relwidth=1, relheight=1) 
-
-                Label(frame_end, bg='purple', text=random.choice(d.readlines()), font='Verdana 12 bold', fg='white').place(relx=0.1, rely=0.1, relwidth=0.8, relheight=0.8) 
-
-                break 
-
-  
-
-            elif ü=="Dostoyevski" or ü=="dostoyevski": 
-
-                d=open("dostoyevski.txt","r") 
-
-                e=Tk() 
-
-                canvas=Canvas(e, height=600, width=600) 
-
-                canvas.pack() 
-
-                frame_end=Frame(e, bg="purple") 
-
-                frame_end.place(relx=0, rely=0, relwidth=1, relheight=1) 
-
-                Label(frame_end, bg='purple', text=random.choice(d.readlines()), font='Verdana 12 bold', fg='white').place(relx=0.1, rely=0.1, relwidth=0.8, relheight=0.8) 
-
-                break 
-
-  
-
-            elif ü=="Tolstoy" or ü=="tolstoy": 
-
-                d=open("tolstoy.txt","r") 
-
-                e=Tk() 
-
-                canvas=Canvas(e, height=600, width=600) 
-
-                canvas.pack() 
-
-                frame_end=Frame(e, bg="purple") 
-
-                frame_end.place(relx=0, rely=0, relwidth=1, relheight=1) 
-
-                Label(frame_end, bg='purple', text=random.choice(d.readlines()), font='Verdana 12 bold', fg='white').place(relx=0.1, rely=0.1, relwidth=0.8, relheight=0.8) 
-
-                break 
-
-  
-
-            elif ü=="Alexander Pushkin" or ü=="alexander pushkin": 
-
-                d=open("pushkin.txt","r") 
-
-                e=Tk() 
-
-                canvas=Canvas(e, height=600, width=600) 
-
-                canvas.pack() 
-
-                frame_end=Frame(e, bg="purple") 
-
-                frame_end.place(relx=0, rely=0, relwidth=1, relheight=1) 
-
-                Label(frame_end, bg='purple', text=random.choice(d.readlines()), font='Verdana 12 bold', fg='white').place(relx=0.1, rely=0.1, relwidth=0.8, relheight=0.8) 
-
-                break 
-
-  
-
-            elif ü=="Jules Verne" or ü=="jules verne": 
-
-                d=open("verne.txt","r") 
-
-                e=Tk() 
-
-                canvas=Canvas(e, height=600, width=600) 
-
-                canvas.pack() 
-
-                frame_end=Frame(e, bg="purple") 
-
-                frame_end.place(relx=0, rely=0, relwidth=1, relheight=1) 
-
-                Label(frame_end, bg='purple', text=random.choice(d.readlines()), font='Verdana 12 bold', fg='white').place(relx=0.1, rely=0.1, relwidth=0.8, relheight=0.8) 
-
-                break 
-
-  
-
-            elif  ü=="Oğuz Atay" or ü=="oğuz atay": 
-
-                d=open("oguzatay.txt","r") 
-
-                e=Tk() 
-
-                canvas=Canvas(e, height=600, width=600) 
-
-                canvas.pack() 
-
-                frame_end=Frame(e, bg="purple") 
-
-                frame_end.place(relx=0, rely=0, relwidth=1, relheight=1) 
-
-                Label(frame_end, bg='purple', text=random.choice(d.readlines()), font='Verdana 12 bold', fg='white').place(relx=0.1, rely=0.1, relwidth=0.8, relheight=0.8) 
-
-                break 
-
-  
-
-            elif ü=="Goethe" or ü=="goethe": 
-
-                d=open("goethe.txt","r") 
-
-                e=Tk() 
-
-                canvas=Canvas(e, height=600, width=600) 
-
-                canvas.pack() 
-
-                frame_end=Frame(e, bg="purple") 
-
-                frame_end.place(relx=0, rely=0, relwidth=1, relheight=1) 
-
-                Label(frame_end, bg='purple', text=random.choice(d.readlines()), font='Verdana 12 bold', fg='white').place(relx=0.1, rely=0.1, relwidth=0.8, relheight=0.8) 
-
-                break 
-
-  
-
-            elif ü=="Jack London" or ü== "jack london": 
-
-                d=open("jacklondon.txt","r") 
-
-                e=Tk() 
-
-                canvas=Canvas(e, height=600, width=600) 
-
-                canvas.pack() 
-
-                frame_end=Frame(e, bg="purple") 
-
-                frame_end.place(relx=0, rely=0, relwidth=1, relheight=1) 
-
-                Label(frame_end, bg='purple', text=random.choice(d.readlines()), font='Verdana 12 bold', fg='white').place(relx=0.1, rely=0.1, relwidth=0.8, relheight=0.8) 
-
-                break 
-
-  
-
-            elif ü=="Victor Hugo" or ü=="victor hugo": 
-
-                d=open("hugo.txt","r") 
-
-                e=Tk() 
-
-                canvas=Canvas(e, height=600, width=600) 
-
-                canvas.pack() 
-
-                frame_end=Frame(e, bg="purple") 
-
-                frame_end.place(relx=0, rely=0, relwidth=1, relheight=1) 
-
-                Label(frame_end, bg='purple', text=random.choice(d.readlines()), font='Verdana 12 bold', fg='white').place(relx=0.1, rely=0.1, relwidth=0.8, relheight=0.8) 
-
-                break 
-
-  
-
-            elif ü=="Oscar Wilde" or ü=="oscar wilde": 
-
-                d=open("oscarwilde.txt","r") 
-
-                e=Tk() 
-
-                canvas=Canvas(e, height=600, width=600) 
-
-                canvas.pack() 
-
-                frame_end=Frame(e, bg="purple") 
-
-                frame_end.place(relx=0, rely=0, relwidth=1, relheight=1) 
-
-                Label(frame_end, bg='purple', text=random.choice(d.readlines()), font='Verdana 12 bold', fg='white').place(relx=0.1, rely=0.1, relwidth=0.8, relheight=0.8) 
-
-                break 
-
-             
-
-            elif ü=="George Orwell" or ü=="george orwell": 
-
-                d=open("orwell.txt","r") 
-
-                e=Tk() 
-
-                canvas=Canvas(e, height=600, width=600) 
-
-                canvas.pack() 
-
-                frame_end=Frame(e, bg="purple") 
-
-                frame_end.place(relx=0, rely=0, relwidth=1, relheight=1) 
-
-                Label(frame_end, bg='purple', text=random.choice(d.readlines()), font='Verdana 12 bold', fg='white').place(relx=0.1, rely=0.1, relwidth=0.8, relheight=0.8)  
-
-                break 
+        Label(frame_end, bg='purple', text=random.choice(d.readlines()), font='Verdana 12 bold', fg='white').place(relx=0.1, rely=0.1, relwidth=0.8, relheight=0.8)
 
      
 
