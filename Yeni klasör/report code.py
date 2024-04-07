@@ -1945,7 +1945,7 @@ def aut():
 
     if ü==q[0] or ü==q[1]: 
 
-        d=open("peterhandke.txt","r") 
+        d=open("peterhandke (1).txt","r") 
 
         e=Tk() 
 
@@ -1965,7 +1965,7 @@ def aut():
 
     elif ü==q[2] or ü==q[3]: 
 
-        d=open("louiseglück.txt","r") 
+        d=open("louiseglück (1).txt","r") 
 
         e=Tk() 
 
